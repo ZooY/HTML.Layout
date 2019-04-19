@@ -1,0 +1,32 @@
+﻿/* Цвет границ */
+@tableBorderColor: black;
+/* Отступ содержимого от верхнего и нижнего краев ячейки */
+@tableCellVerticalPadding: 5px;
+/* Отступ содержимого от левого и правого краев ячейки */
+@tableCellHorizontalPadding: 10px;
+
+
+table {
+    border-collapse: collapse;
+    border-top: 2px solid @tableBorderColor;
+    border-bottom: 2px solid @tableBorderColor;
+    width: 100%;
+}
+table > thead > tr {
+    border-bottom: 2px solid @tableBorderColor;   
+    text-align: left;vertical-align: middle;
+}
+table > tbody > tr {
+    border-top: 1px solid @tableBorderColor; /*fade(@tableBorderColor, 25%);*/
+}
+table > thead > tr > th, table > tbody > tr > td {
+    padding: @tableCellVerticalPadding @tableCellHorizontalPadding;
+}
+
+
+table.with-details > tbody > tr { background-color: fade(@tableBorderColor, 10%); }
+table.with-details > tbody > tr.details { background-color: inherit;  border-top: none; }
+table.with-details > tbody > tr.details > td { padding: 0; }
+table.with-details tr.details > td > table { border: none; margin: 0; }
+table.with-details tr.details > td > table > tbody > tr { border-color: fade(@tableBorderColor, 10%); }
+table.with-details tr.details > td > table > tbody > tr:first-child { border-top: none ; }

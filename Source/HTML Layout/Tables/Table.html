@@ -1,0 +1,151 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="https://code.jquery.com/jquery-3.4.0.slim.min.js" integrity="sha256-ZaXnYkHGqIhqTbJ6MB4l9Frs/r7U4jlx7ir8PJYBqbI=" crossorigin="anonymous"></script>
+    <link href="/Styles.min.css" rel="stylesheet" />
+    <link href="Table.min.css" rel="stylesheet" />
+    <style>
+        #Type a { text-decoration: none; border-bottom: 1px dashed; }
+        table { margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <ul id="Type" class="horizontal">
+        <li><a href="#">table1</a></li>
+    </ul>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Заголовок 1</th>
+                <th>Заголовок 2</th>
+                <th>Заголовок 3</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Значение 1</td>
+                <td>Значение 2</td>
+                <td>Значение 3</td>
+            </tr>
+            <tr>
+                <td>Значение 1</td>
+                <td>Значение 2</td>
+                <td>Значение 3</td>
+            </tr>
+            <tr>
+                <td>Значение 1</td>
+                <td>Значение 2</td>
+                <td>Значение 3</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table class="with-details">
+        <thead>
+            <tr>
+                <th>Заголовок 1</th>
+                <th>Заголовок 2</th>
+                <th>Заголовок 3</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Значение 1</td>
+                <td>Значение 2</td>
+                <td>Значение 3</td>
+            </tr>
+            <tr class="details">
+                <td colspan="3">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>Значение 1</td>
+                                <td>Значение 2</td>
+                                <td>Значение 3</td>
+                            </tr>
+                            <tr>
+                                <td>Значение 1</td>
+                                <td>Значение 2</td>
+                                <td>Значение 3</td>
+                            </tr>
+                            <tr>
+                                <td>Значение 1</td>
+                                <td>Значение 2</td>
+                                <td>Значение 3</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>Значение 1</td>
+                <td>Значение 2</td>
+                <td>Значение 3</td>
+            </tr>
+            <tr class="details">
+                <td colspan="3">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>Значение 1</td>
+                                <td>Значение 2</td>
+                                <td>Значение 3</td>
+                            </tr>
+                            <tr>
+                                <td>Значение 1</td>
+                                <td>Значение 2</td>
+                                <td>Значение 3</td>
+                            </tr>
+                            <tr>
+                                <td>Значение 1</td>
+                                <td>Значение 2</td>
+                                <td>Значение 3</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>Значение 1</td>
+                <td>Значение 2</td>
+                <td>Значение 3</td>
+            </tr>
+            <tr class="details">
+                <td colspan="3">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>Значение 1</td>
+                                <td>Значение 2</td>
+                                <td>Значение 3</td>
+                            </tr>
+                            <tr>
+                                <td>Значение 1</td>
+                                <td>Значение 2</td>
+                                <td>Значение 3</td>
+                            </tr>
+                            <tr>
+                                <td>Значение 1</td>
+                                <td>Значение 2</td>
+                                <td>Значение 3</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <script>
+        $('#Type li').click(function () {
+            var cls = $(this).html();
+            $('body > table').removeAttr('class').addClass(cls);
+            return false;
+        });
+    </script>
+</body>
+</html>

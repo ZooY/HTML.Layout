@@ -1,0 +1,44 @@
+﻿/* Ширина меток */
+/* расстояние от метки до элемента управления */
+/* Отступ между полями, идущими друг за другом */
+/* Смещение метки сверху, чтобы метка была на одной линии с элементом управления */
+/* Отступ сообщения об ошибке от элменета управления */
+form > p {
+  clear: both;
+}
+form::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+form > p > label {
+  float: left;
+  width: 200px;
+  padding: 2px 0 0 0;
+}
+form label > strong {
+  font-weight: normal;
+}
+form label > span {
+  display: block;
+}
+form > p > span {
+  display: block;
+  margin: 0 0 0 220px;
+}
+form input,
+form select,
+form textarea {
+  width: 100%;
+}
+form input[type=radio] {
+  width: auto;
+}
+form .error {
+  display: block;
+  margin: 3px 0 0 0;
+}
+form label,
+form > p > span {
+  margin-bottom: 20px;
+}

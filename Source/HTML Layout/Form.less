@@ -1,0 +1,56 @@
+﻿/* Ширина меток */
+@formLabelWidth: 200px;
+/* расстояние от метки до элемента управления */
+@formLabelSpace: 20;
+/* Отступ между полями, идущими друг за другом */
+@formRowSpace: 20px;
+/* Смещение метки сверху, чтобы метка была на одной линии с элементом управления */
+@formLabelTopOffset: 2px;
+/* Отступ сообщения об ошибке от элменета управления */
+@formErrorpOffset: 3px;
+
+form > p {
+    clear: both;
+}
+
+form::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+form > p > label {
+    float: left;
+    width: @formLabelWidth;
+    padding: @formLabelTopOffset 0 0 0;
+}
+
+form label > strong {
+    font-weight: normal;
+}
+
+form label > span {
+    display: block;
+}
+
+form > p > span {
+    display: block;
+    margin: 0 0 0 (@formLabelWidth + @formLabelSpace);
+}
+
+form input, form select, form textarea {
+    width: 100%;
+}
+
+form input[type=radio] {
+    width: auto;
+}
+
+form .error {
+    display: block;
+    margin: @formErrorpOffset 0 0 0;
+}
+
+form label, form > p > span {
+    margin-bottom: @formRowSpace;
+}

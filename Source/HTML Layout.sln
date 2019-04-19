@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.202
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HTML Layout", "HTML Layout\HTML Layout.csproj", "{F4EB8CE6-080F-4568-86BC-DD7D1D89FB3A}"
 EndProject
@@ -18,5 +18,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		LessCompiler = f4eb8ce6-080f-4568-86bc-dd7d1d89fb3a
+		SolutionGuid = {723CA561-20DB-44F2-BDB5-E041F8A64DFC}
 	EndGlobalSection
 EndGlobal

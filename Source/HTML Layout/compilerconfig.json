@@ -1,0 +1,14 @@
+﻿[
+  {
+    "outputFile": "Form.css",
+    "inputFile": "Form.less"
+  },
+  {
+    "outputFile": "Tables/Table.css",
+    "inputFile": "Tables/Table.less"
+  },
+  {
+    "outputFile": "Styles.css",
+    "inputFile": "Styles.less"
+  }
+]

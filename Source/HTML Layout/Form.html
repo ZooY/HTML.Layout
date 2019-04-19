@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	<style>
+	form label > span { font-family: 'Segoe UI Light'; }
+	.error { color: red; }
+	.error::before { content: "\f071"; font-family: "Font Awesome 5 Free"; font-weight: 900; margin: 0 5px 0 0; }
+	</style>
+    <link href="Form.min.css" rel="stylesheet" />
+</head>
+<body>
+<h1>Верстка форм</h1>
+
+<form>
+	<p>
+		<label for="Field1">
+			<strong>Метка поля</strong>
+			<span>Описание поле, расположенное в области метки. Описание может содержать <a href="https://ya.ru" target="_blank">ссылку</a>.</span>
+		</label>
+		<span>
+			<input id="Field1" />
+		</span>	
+	</p>
+	<p>
+		<label for="Field2">
+			<strong>Метка другого поля</strong>
+			<span>Описание другого поле, расположенное в области метки.</span>
+		</label>
+		<span>
+			<input id="Field2" />
+			<span class="error">Что то пошло не так и произошла ошибка.</span>
+		</span>	
+	</p>	
+	<p>
+		<label>
+			<strong>Метка поля с достаточно длинным названием</strong>
+		</label>
+		<span>
+			<input type="radio" id="Field3_1" name="Field3" /> <label for="Field3_1">Option</label>
+			<input type="radio" id="Field3_2" name="Field3" /> <label for="Field3_2">Other option</label>
+		</span>	
+	</p>
+	<p>
+		<label for="Field4">
+			<strong>Короткая метка</strong>
+		</label>
+		<span>
+			<select id="Field4"></select>
+		</span>	
+	</p>
+	<p>
+		<label for="Field5">
+			<strong>Метка поля с длинным название и длинным описанием</strong>
+			<span>Конечно, такие длинные метки лучше не делать. Метка должна быть лаконичной, а вот описание может быть длинным.</span>
+		</label>
+		<span>
+			<textarea id="Field5"></textarea>
+		</span>	
+	</p>
+    <p class="buttons">
+        <button>OK</button>
+    </p>
+</form>
+
+</body>
+</html>
