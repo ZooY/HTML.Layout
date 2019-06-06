@@ -122,6 +122,7 @@
     </Content>
     <Content Include="Tables\Table.less" />
     <Content Include="Styles.less" />
+    <Content Include="Fonts.less" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

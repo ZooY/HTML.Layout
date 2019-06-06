@@ -3,7 +3,10 @@
 /* Отступ между полями, идущими друг за другом */
 /* Смещение метки сверху, чтобы метка была на одной линии с элементом управления */
 /* Отступ сообщения об ошибке от элменета управления */
-form > p {
+form > div,
+form > fieldset,
+form > fieldset > div,
+form > .group > div {
   clear: both;
 }
 form::after {
@@ -11,7 +14,9 @@ form::after {
   display: block;
   clear: both;
 }
-form > p > label {
+form > div > label,
+form > fieldset > div > label,
+form > .group > div > label {
   float: left;
   width: 200px;
   padding: 2px 0 0 0;
@@ -21,8 +26,11 @@ form label > strong {
 }
 form label > span {
   display: block;
+  font-family: 'Segoe UI Light';
 }
-form > p > span {
+form > div > span,
+form > fieldset > div > span,
+form > .group > div > span {
   display: block;
   margin: 0 0 0 220px;
 }
@@ -37,8 +45,12 @@ form input[type=radio] {
 form .error {
   display: block;
   margin: 3px 0 0 0;
+  color: red;
 }
 form label,
-form > p > span {
+form > div > span,
+form > fieldset,
+form > fieldset > div > span,
+form > .group > div > span {
   margin-bottom: 20px;
 }

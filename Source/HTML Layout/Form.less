@@ -1,4 +1,7 @@
-﻿/* Ширина меток */
+﻿@import "Fonts";
+
+
+/* Ширина меток */
 @formLabelWidth: 200px;
 /* расстояние от метки до элемента управления */
 @formLabelSpace: 20;
@@ -9,7 +12,13 @@
 /* Отступ сообщения об ошибке от элменета управления */
 @formErrorpOffset: 3px;
 
-form > p {
+@formErrorColor: red;
+
+
+form > div, 
+form > fieldset, 
+form > fieldset > div,
+form > .group > div {
     clear: both;
 }
 
@@ -19,7 +28,9 @@ form::after {
     clear: both;
 }
 
-form > p > label {
+form > div > label,
+form > fieldset > div > label,
+form > .group > div > label {
     float: left;
     width: @formLabelWidth;
     padding: @formLabelTopOffset 0 0 0;
@@ -31,9 +42,12 @@ form label > strong {
 
 form label > span {
     display: block;
+    font-family: @fontWeak;
 }
 
-form > p > span {
+form > div > span,
+form > fieldset > div > span,
+form > .group > div > span {
     display: block;
     margin: 0 0 0 (@formLabelWidth + @formLabelSpace);
 }
@@ -49,8 +63,13 @@ form input[type=radio] {
 form .error {
     display: block;
     margin: @formErrorpOffset 0 0 0;
+    color: @formErrorColor;
 }
 
-form label, form > p > span {
+form label,
+form > div > span,
+form > fieldset,
+form > fieldset > div > span,
+form > .group > div  > span{
     margin-bottom: @formRowSpace;
 }
